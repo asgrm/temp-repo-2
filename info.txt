@@ -1,0 +1,47 @@
+// process    - info about env where the program is being executed
+// module     - info about current module (file)
+
+arrow up in a terminal - goes to a privious command
+
+os module: 
+  os.userInfo() - returns info about user
+  os.type() - Returns the operating system name as returned by uname(3). For example, it returns 'Linux' on Linux, 'Darwin' on macOS, and 'Windows_NT' on Windows.
+  os.release() - basically version of system
+
+  os.uptime() - Returns the system uptime (how long system works with no errors) in number of seconds.
+
+  os.totalmem() - Returns the total amount of system memory in bytes as an integer.
+
+  os.freemem() - Returns the amount of free system memory in bytes as an integer.
+
+path module
+  path.sep - Provides the platform-specific path segment separator:
+    \ on Windows
+    / on POSIX
+
+  path.join([...paths]) - The path.join() method joins all given path segments together using the platform-specific separator as a delimiter, then normalizes the resulting path.
+
+  path.basename(path[, ext]) - The path.basename() method returns the last portion of a path (relative path from current directory).
+
+  __dirname - refers to folder where currently executable file is
+
+fs module
+  fs.writeFileSync(file, data[, options])
+    data - encoding  
+  default options is {flag: 'w'}
+  flag w - overwrite content,
+  flag a - append to a content
+
+  without Sync - takes callback (err, result) => {} as an argument
+
+http module
+  http.createServer([options][, requestListener]) - Returns a new instance of http.Server. (if passed 1 - requestListener)
+  requestListener - takes req, res (not next() - it's express feature)
+
+  server.listen(port) - Starts the HTTP server listening for connections.
+
+  res.write(chunk[, encoding][, callback]) - This sends a chunk of the response body. This method may be called multiple times to provide successive parts of the body. passed value may be html string
+
+  response.end([data[, encoding]][, callback]) - end response
+
+  req.url - url of request
